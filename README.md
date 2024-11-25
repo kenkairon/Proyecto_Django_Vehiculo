@@ -71,6 +71,7 @@ Educativo y de Aprendizaje Personal
    from django.db import models
 
    class Vehiculo(models.Model):
+      ```bash
       MARCA_CHOICES = [
          ('Fiat', 'Fiat'),
          ('Chevrolet', 'Chevrolet'),
@@ -131,4 +132,3 @@ Educativo y de Aprendizaje Personal
    admin
    admin1234
 
-   
