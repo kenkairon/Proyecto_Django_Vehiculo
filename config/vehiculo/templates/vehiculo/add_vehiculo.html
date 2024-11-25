@@ -1,9 +1,17 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<!-- Contenido específico de la página aquí -->
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Enviar</button>
-</form>
+<div class="container mt-4">
+    <h1 class="mb-4">Formulario</h1>
+    <!-- Contenedor para el formulario -->
+    <div class="card shadow-sm p-4 border rounded">
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</div>
 {% endblock %}
