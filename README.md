@@ -6,7 +6,7 @@ Educativo y de Aprendizaje Personal
 - [Configuración del Entorno](#configuración-del-entorno)
 - [Activar el entorno virtual](#Activar-el-entorno-virtual)
 - [Instalar Django y Guardar dependencias](#Instalar-Django-y-Guardar-dependencias)
-- [Pasos del Proyecto](#pasos-del-proyecto)
+- [Pasos del Proyecto](#Pasos-del-Proyecto)
 
 
 
@@ -34,10 +34,10 @@ Educativo y de Aprendizaje Personal
 ## Instalar Django y Guardar dependencias
 
 3. Intalación Django
-    ```bash
+   ```bash
    pip install Django==4.0.5 django-bootstrap-v5==1.0.11 django-crispy-forms==1.14.0 crispy-bootstrap5==0.6
 
-4.  Instalación dependencias
+4. Instalación dependencias
    ```bash
    pip freeze > requirements.txt
 
