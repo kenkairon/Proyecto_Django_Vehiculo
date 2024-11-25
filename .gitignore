@@ -122,8 +122,10 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.proyecto_vehiculos_django
 .env
 .venv
+.proyecto_vehiculos_django/
 env/
 venv/
 ENV/
