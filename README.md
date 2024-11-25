@@ -101,33 +101,5 @@ Educativo y de Aprendizaje Personal
    admin.site.register(Vehiculo)
 
 
-11. colocamos los siguientes comandos
-    
-   ```bash
-   python manage.py makemigrations
-   python manage.py migrate
 
-## Creación del SuperUsuario Y Configuraciones
-12. Creamos un superusuario 
-
-   ```bash
-   python manage.py createsuperuser
-
-13. Verificamos usuario y contraseña del superuser por motivos de aprendizaje le vamos a dar estos parametros pero que no son seguros
-   ```bash
-   admin
-   admin@gmail.com
-   admin1234
-   y
-
-15. Hacemos Correr en el Servidor nuestra Aplicación
-
-   ```bash
-   python manage.py runserver
-
-16. Nos situamos en la pagina admin  http://127.0.0.1:8000/admin
-
-   ```bash
-   admin
-   admin1234
 
