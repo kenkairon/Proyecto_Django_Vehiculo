@@ -67,11 +67,8 @@ Educativo y de Aprendizaje Personal
    ]
 9. Definir el vehiculo/models.py
    ```bash
-
    from django.db import models
-
-   class Vehiculo(models.Model):
-      
+   class Vehiculo(models.Model):      
       MARCA_CHOICES = [
          ('Fiat', 'Fiat'),
          ('Chevrolet', 'Chevrolet'),
@@ -83,7 +80,6 @@ Educativo y de Aprendizaje Personal
          ('Transporte', 'Transporte'),
          ('Carga', 'Carga'),
       ]
-
       marca = models.CharField(max_length=20, choices=MARCA_CHOICES, default='Ford')
       modelo = models.CharField(max_length=100)
       serial_carroceria = models.CharField(max_length=50)
