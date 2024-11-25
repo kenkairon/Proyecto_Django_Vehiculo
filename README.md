@@ -7,7 +7,7 @@ Educativo y de Aprendizaje Personal
 - [Activar el entorno virtual](#Activar-el-entorno-virtual)
 - [Instalar Django y Guardar dependencias](#Instalar-Django-y-Guardar-dependencias)
 - [Pasos del Proyecto](#Pasos-del-Proyecto)
-   -[Creación del SuperUsuario Y Configuraciones](#Creación-del-SuperUsuario-Y-Configuraciones)
+   - [Creación del SuperUsuario Y Configuraciones](#Creación-del-SuperUsuario-Y-Configuraciones)
 
 
 ## Requisitos
