@@ -99,3 +99,9 @@ Educativo y de Aprendizaje Personal
       from .models import Vehiculo
 
       admin.site.register(Vehiculo)
+
+11. colocamos los siguientes comandos
+    
+      ```bash
+      python manage.py makemigrations
+      python manage.py migrate
