@@ -94,12 +94,8 @@ Educativo y de Aprendizaje Personal
 
 10. Registrar el models en vehiculo/admin.py:
 
-   ```bash
-   from django.contrib import admin
-   from .models import Vehiculo
+      ```bash
+      from django.contrib import admin
+      from .models import Vehiculo
 
-   admin.site.register(Vehiculo)
-
-
-
-
+      admin.site.register(Vehiculo)
