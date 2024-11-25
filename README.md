@@ -71,7 +71,7 @@ Educativo y de Aprendizaje Personal
    from django.db import models
 
    class Vehiculo(models.Model):
-      ```bash
+      
       MARCA_CHOICES = [
          ('Fiat', 'Fiat'),
          ('Chevrolet', 'Chevrolet'),
@@ -97,11 +97,12 @@ Educativo y de Aprendizaje Personal
          return f"{self.marca} {self.modelo}"
 
 10. Registrar el models en vehiculo/admin.py:
-   ```bash
-   from django.contrib import admin
-   from .models import Vehiculo
 
-   admin.site.register(Vehiculo)
+      ```bash
+      from django.contrib import admin
+      from .models import Vehiculo
+
+      admin.site.register(Vehiculo)
 
 
 11. colocamos los siguientes comandos
@@ -128,6 +129,7 @@ Educativo y de Aprendizaje Personal
     python manage.py runserver
 
 16. Nos situamos en la pagina admin  http://127.0.0.1:8000/admin
+
     ```bash
    admin
    admin1234
