@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Vehículos{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">Listado de Vehículos</h1>
+    <div class="table-responsive">
+        <table class="table table-striped border rounded-3 overflow-hidden">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Serial Carrocería</th>
+                    <th scope="col">Serial Motor</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Condición de Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vehiculo in vehiculos %}
+                <tr>
+                    <th scope="row">{{ forloop.counter }}</th>
+                    <td>{{ vehiculo.marca }}</td>
+                    <td>{{ vehiculo.modelo }}</td>
+                    <td>{{ vehiculo.serial_carroceria }}</td>
+                    <td>{{ vehiculo.serial_motor }}</td>
+                    <td>{{ vehiculo.categoria }}</td>
+                    <td>${{ vehiculo.precio }}</td>
+                    <td>{{ vehiculo.condicion_precio }}</td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="8" class="text-center">No hay vehículos disponibles</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

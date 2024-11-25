@@ -38,8 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'vehiculo',
-    'crispy_forms',  # Para formularios con Bootstrap
-    'crispy_bootstrap5',
     'bootstrap5',
 ]
 
