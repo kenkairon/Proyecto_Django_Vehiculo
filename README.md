@@ -5,7 +5,7 @@ Educativo y de Aprendizaje Personal
 - [Requisitos](#requisitos)
 - [Configuración del Entorno](#configuración-del-entorno)
 - [Activar el entorno virtual](#Activar-el-entorno-virtual)
-- [Instalaciones](#Instalaciones)
+- [Instalar Django y Guardar dependencias](#Instalar-Django-y-Guardar-dependencias)
 - [Pasos del Proyecto](#pasos-del-proyecto)
 
 
@@ -22,7 +22,7 @@ Educativo y de Aprendizaje Personal
    ```bash
    python -m venv proyecto_vehiculos_django
 
-## Activación del Entorno
+## Activar el entorno virtual
 
 2. Activar el entorno virtual:
    ### Windows
@@ -30,7 +30,7 @@ Educativo y de Aprendizaje Personal
    proyecto_vehiculos_django\Scripts\activate
 
 
-## Configuración Inicial
+
 ## Instalar Django y Guardar dependencias
 
 3. Intalación Django
@@ -42,6 +42,7 @@ Educativo y de Aprendizaje Personal
    pip freeze > requirements.txt
 
 ## Pasos del Proyecto
+
 5. Crear el Proyecto
    ```bash
    django-admin startproject config
