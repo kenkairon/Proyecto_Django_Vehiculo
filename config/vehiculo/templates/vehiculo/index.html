@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
-{% block content %}
-<!-- Contenido específico de la página aquí -->
-<h1>Catálogo de Vehículos</h1>
-{% endblock %}
+<!-- Main Content -->
+<div class="container mt-5">
+    <h1 class="text-center">Página Principal</h1>
+    {% if user.is_authenticated %}
+    <h2 class="text-center">Usuario autenticado</h2>
+    <p class="text-center">Hello, {{ user.username }}!</p>
+    {% block content %}
+    <!-- Contenido específico de la página aquí -->
+    <h1>Catálogo de Vehículos</h1>
+    {% endblock %}
+    {% else %}
+    <h2 class="text-center text-danger">Acceso Restringido</h2>
+    <p class="text-center">
+        <a href="{% url 'login' %}" class="btn btn-primary">Iniciar Sesión</a>
+    </p>
+    {% endif %}
+</div>

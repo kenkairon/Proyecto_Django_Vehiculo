@@ -5,12 +5,15 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+
 @receiver(post_save, sender=User)
 def asignar_permiso_visualizar_catalogo(sender, instance, created, **kwargs):
     if created:  # Solo al registrar un nuevo usuario
         content_type = ContentType.objects.get(app_label='vehiculo', model='vehiculo')
         permiso = Permission.objects.get(content_type=content_type, codename='visualizar_catalogo')
         instance.user_permissions.add(permiso)
+
+
 
 class Vehiculo(models.Model):
     MARCA_CHOICES = [
@@ -37,7 +40,11 @@ class Vehiculo(models.Model):
     def __str__(self):
         return f"{self.marca} {self.modelo}"
     
+    
     class Meta:
         permissions = [
             ('visualizar_catalogo', 'Puede visualizar el catálogo de vehículos'),
     ]
+
+ 
+   
