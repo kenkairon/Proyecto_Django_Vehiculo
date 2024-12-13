@@ -13,8 +13,6 @@ def asignar_permiso_visualizar_catalogo(sender, instance, created, **kwargs):
         permiso = Permission.objects.get(content_type=content_type, codename='visualizar_catalogo')
         instance.user_permissions.add(permiso)
 
-
-
 class Vehiculo(models.Model):
     MARCA_CHOICES = [
         ('Fiat', 'Fiat'),
@@ -27,7 +25,6 @@ class Vehiculo(models.Model):
         ('Transporte', 'Transporte'),
         ('Carga', 'Carga'),
     ]
-
     marca = models.CharField(max_length=20, choices=MARCA_CHOICES, default='Ford')
     modelo = models.CharField(max_length=100)
     serial_carroceria = models.CharField(max_length=50)

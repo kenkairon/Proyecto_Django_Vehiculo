@@ -2,28 +2,24 @@ from django.shortcuts import render, redirect
 from .forms import VehiculoForm
 from .models import Vehiculo
 from django.contrib.auth.decorators import login_required, permission_required
-from django.http import HttpResponse
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from .formulario import RegisterForm
-from django.http import HttpResponseForbidden
 
 
 def index(request):
     return render(request, 'vehiculo/index.html')
-
 
 def add_vehiculo(request):
     if request.method == 'POST':
         form = VehiculoForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('index')
+            return redirect('listar_vehiculos')
     else:
         form = VehiculoForm()
     return render(request, 'vehiculo/add_vehiculo.html', {'form': form})
-
 
 @login_required  # Este decorador asegura que solo usuarios autenticados puedan acceder
 def listar_vehiculos(request):
@@ -46,7 +42,6 @@ def login_view(request):
         user = authenticate(username=username, password=password)
         if user:
             login(request, user)
-            messages.success(request, f'Bienvenido {user.username}')
             return redirect('index')  # Cambia según la ruta de tu vista principal
         else:
             messages.error(request, 'Usuario o Contraseña no válidos')
