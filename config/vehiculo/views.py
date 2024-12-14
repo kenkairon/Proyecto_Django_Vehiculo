@@ -6,24 +6,31 @@ from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from .formulario import RegisterForm
+from django.contrib.messages.storage.session import SessionStorage
 
 
 def index(request):
     return render(request, 'vehiculo/index.html')
 
+
 def add_vehiculo(request):
     if request.method == 'POST':
         form = VehiculoForm(request.POST)
         if form.is_valid():
-            form.save()
+            vehiculo = form.save(commit=False)  # No guardar aún en la base de datos
+            vehiculo.usuario = request.user  # Asignar el usuario autenticado
+            vehiculo.save()  # Ahora guardar en la base de datos
+            messages.success(request, 'Vehículo agregado exitosamente.')
             return redirect('listar_vehiculos')
     else:
         form = VehiculoForm()
     return render(request, 'vehiculo/add_vehiculo.html', {'form': form})
 
-@login_required  # Este decorador asegura que solo usuarios autenticados puedan acceder
+
+@login_required
+@permission_required('vehiculo.visualizar_catalogo', raise_exception=True)
 def listar_vehiculos(request):
-    vehiculos = Vehiculo.objects.all()
+    vehiculos = Vehiculo.objects.filter(usuario=request.user)  # Filtrar por usuario
     for vehiculo in vehiculos:
         if vehiculo.precio <= 10000:
             vehiculo.condicion_precio = 'Bajo'
@@ -33,7 +40,11 @@ def listar_vehiculos(request):
             vehiculo.condicion_precio = 'Alto'
     return render(request, 'vehiculo/listar.html', {'vehiculos': vehiculos})
 
+
 def login_view(request):
+    # Consumir y descartar los mensajes existentes
+    list(messages.get_messages(request))
+    
     if request.method == 'POST':
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -45,7 +56,9 @@ def login_view(request):
             return redirect('index')  # Cambia según la ruta de tu vista principal
         else:
             messages.error(request, 'Usuario o Contraseña no válidos')
+    
     return render(request, "users/login.html")
+
 
 def logout_view(request):
     logout(request)

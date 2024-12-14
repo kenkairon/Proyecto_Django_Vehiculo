@@ -129,4 +129,10 @@ Educativo y de Aprendizaje Personal
 
       ```bash
       admin
-      admin1234    
+      admin1234  
+
+17. Para Probar la Aplicacion puede logearse o crear un usuario o probar directamente con las credenciales de administrador 
+
+      ```bash
+         admin
+         admin1234 
