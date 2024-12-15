@@ -124,13 +124,13 @@ Educativo y de Aprendizaje Personal
 11. creamos en vehiculo/forms.py 
 
    ```bash
-      from django import forms
-      from .models import Vehiculo
+   from django import forms
+   from .models import Vehiculo
 
-      class VehiculoForm(forms.ModelForm):
-         class Meta:
-            model = Vehiculo
-            fields = ['marca', 'modelo', 'serial_carroceria', 'serial_motor', 'categoria', 'precio']
+   class VehiculoForm(forms.ModelForm):
+      class Meta:
+         model = Vehiculo
+         fields = ['marca', 'modelo', 'serial_carroceria', 'serial_motor', 'categoria', 'precio']   
 
 12. Creamos vehiculo/formulario.py para razones de registro cin RegisterForm
 
