@@ -119,7 +119,7 @@ Educativo y de Aprendizaje Personal
          class Meta:
             permissions = [
                   ('visualizar_catalogo', 'Puede visualizar el catálogo de vehículos'),
-      ]
+   ]
 
 11. creamos en vehiculo/forms.py 
 
