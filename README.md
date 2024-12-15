@@ -120,8 +120,10 @@ Educativo y de Aprendizaje Personal
             permissions = [
                   ('visualizar_catalogo', 'Puede visualizar el catálogo de vehículos'),
       ]
+
 11. creamos en vehiculo/forms.py 
-      ```bash
+
+   ```bash
    from django import forms
    from .models import Vehiculo
 
@@ -131,6 +133,7 @@ Educativo y de Aprendizaje Personal
          fields = ['marca', 'modelo', 'serial_carroceria', 'serial_motor', 'categoria', 'precio']
 
 12. Creamos vehiculo/formulario.py para razones de registro cin RegisterForm
+
    ```bash
    from django import forms
    from django.contrib.auth.models import User
