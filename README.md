@@ -80,6 +80,7 @@ Educativo y de Aprendizaje Personal
          ('Transporte', 'Transporte'),
          ('Carga', 'Carga'),
       ]
+      usuario = models.ForeignKey(User, on_delete=models.CASCADE,null=True,blank=True)
       marca = models.CharField(max_length=20, choices=MARCA_CHOICES, default='Ford')
       modelo = models.CharField(max_length=100)
       serial_carroceria = models.CharField(max_length=50)
