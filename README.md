@@ -64,6 +64,7 @@ Educativo y de Aprendizaje Personal
       'django.contrib.messages',
       'django.contrib.staticfiles',
       'vehiculo',
+      'bootstrap5',
    ]
 9. Definir el vehiculo/models.py
    ```bash
