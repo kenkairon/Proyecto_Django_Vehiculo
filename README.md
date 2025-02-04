@@ -315,18 +315,18 @@ Educativo y de Aprendizaje Personal
       admin1234  
 
 20. Para Probar la Aplicacion puede logearse o crear un usuario o probar directamente con las credenciales de administrador 
-   ```bash
-   http://127.0.0.1:8000/vehiculo/login/
+      ```bash
+      http://127.0.0.1:8000/vehiculo/login/
 
 21. Y si no tienes cuenta registrate 
 
-   ```bash
-   http://127.0.0.1:8000/vehiculo/registro/
+      ```bash
+      http://127.0.0.1:8000/vehiculo/registro/
 
 22. Una vez registrado o logeado , puedes agregar vehiculos
-   ```bash
-   http://127.0.0.1:8000/vehiculo/add/
+      ```bash
+      http://127.0.0.1:8000/vehiculo/add/
 
 23. y listar vehiculos
-   ```bash
-   http://127.0.0.1:8000/vehiculo/list/
+      ```bash
+      http://127.0.0.1:8000/vehiculo/list/
