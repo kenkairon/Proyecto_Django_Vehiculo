@@ -7,7 +7,74 @@
     <p class="text-center">Hello, {{ user.username }}!</p>
     {% block content %}
     <!-- Contenido específico de la página aquí -->
-    <h1>Catálogo de Vehículos</h1>
+    <div class="container mt-5">
+
+        <h1 class="text-center mb-4">Catálogo de Vehículos</h1>
+
+        <!-- Carrusel -->
+        <div id="vehiculosCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicadores -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#vehiculosCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true">
+                </button>
+
+                <button type="button" data-bs-target="#vehiculosCarousel" data-bs-slide-to="1">
+                </button>
+
+                <button type="button" data-bs-target="#vehiculosCarousel" data-bs-slide-to="2">
+                </button>
+            </div>
+
+            <!-- Imágenes -->
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <div class="ratio ratio-16x9">
+                        <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70" class="w-100"
+                            alt="Vehículo deportivo">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7" class="w-100"
+                            alt="Vehículo moderno">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="ratio ratio-16x9">
+                        <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" class="w-100"
+                            alt="Automóvil">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Botón anterior -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#vehiculosCarousel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+
+            </button>
+
+            <!-- Botón siguiente -->
+            <button class="carousel-control-next" type="button" data-bs-target="#vehiculosCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
     {% endblock %}
     {% else %}
     <h2 class="text-center text-danger">Acceso Restringido</h2>
